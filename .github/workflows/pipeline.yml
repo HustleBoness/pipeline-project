@@ -30,9 +30,7 @@ steps:
 - name: Baixar código
 uses: actions/checkout@v7
 -name: Criar pacote para entrega
-run: |
-mkdir -p dist
-cp calculadora.py dist/
+run: | mkdir -p dist cp calculadora.py dist 
 echo "Commit: $GITHUB_SHA" > dist/build-info.txt
 -name: Publicar artefato
 uses: actions/upload-artifact@v7
